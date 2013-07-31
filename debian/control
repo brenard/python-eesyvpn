@@ -1,0 +1,12 @@
+Source: python-eesyvpn
+Maintainer: Benjamin Renard <brenard@zionetrix.net>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7)
+Standards-Version: 3.9.1
+
+Package: python-eesyvpn
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: EesyVPN python librairy
+ Python librairy to manage EesyVPN C.A. using Python.

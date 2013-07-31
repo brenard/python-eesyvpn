@@ -1,0 +1,4 @@
+*~
+*.pyc
+EesyVPN.egg-info
+build/*
