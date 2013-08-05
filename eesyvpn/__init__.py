@@ -68,12 +68,12 @@ def str2date(date=None):
 def is_valid_name(name):
 	return re.match('^[0-9a-zA-Z\.\-\_]*$',name)
 
-def simpleAction(action,name):
+def simpleAction(action,name,args=''):
 	if not is_valid_name(name):
 		logging.error('Invalid name')
 		return False
 
-	code,ret,err = eesyvpn('%s %s' % (action,name))
+	code,ret,err = eesyvpn('%s %s %s' % (action,name,args))
 
 	if code == 0:
 		return True
