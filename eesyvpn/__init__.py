@@ -81,8 +81,13 @@ def simpleAction(action,name,args=''):
 		raise EesyvpnException(code,ret,err)
 		return False
 
-def create(name):
-	return simpleAction('create',name)
+def create(name=None,type='client'):
+	if type=='client':
+		return simpleAction('create',name)
+	elif type=='server':
+		return simpleAction('create',name,'--server')
+	else:
+		return False
 
 def recreate(name):
 	return simpleAction('recreate',name)
